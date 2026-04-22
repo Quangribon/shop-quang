@@ -1,0 +1,66 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background-image: url(anh/a4.jfif);
+}
+
+h1 {
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff9800;
+}
+.product {
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+/* Áo */
+.product-1 {
+  background-image: url(anh/a1.jfif) ;
+}
+
+/* Quần */
+.product-2 {
+  background: linear-gradient(135deg, #a1ffce, #faffd1);
+}
+
+/* Giày */
+.product-3 {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
