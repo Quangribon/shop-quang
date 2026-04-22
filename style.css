@@ -1,74 +1,213 @@
-body {
-  font-family: Arial;
-  padding: 20px;
-  background-image: url(anh/a4.jfif);
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f1f5f9}
+
+/* HEADER */
+.header{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#0b5ed7;
+  color:white;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+}
+.zalo-chat{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:linear-gradient(135deg,#1e90ff,#0066ff);
+  color:white;
+  padding:12px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  transition:0.3s;
 }
 
-h1 {
-  text-align: center;
+.zalo-chat:hover{
+  transform:scale(1.05);
 }
 
-.products {
+.logo{font-weight:bold;font-size:20px}
+
+.search input{
+  width: 300px;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  padding:7px;
+  border:none;
+  border-radius:5px;
+  justify-content: center;
+  margin-left: 650px;
+}
+.search{
+  display: flex;
   justify-content: center;
 }
 
-.product {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  width: 150px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* LAYOUT */
+.container{
+  display:flex;
+  gap:15px;
+  padding:15px;
 }
 
-button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 8px;
-  cursor: pointer;
+/* SIDEBAR */
+.sidebar{
+  width:230px;
+  background:#1e3a8a;
+  color:white;
+  border-radius:10px;
+  height:fit-content;
 }
 
-button:hover {
-  background: #ff9800;
+.sidebar h3{margin:0;padding:12px;background:#2563eb}
+
+.sidebar li{
+  list-style:none;
+  padding:12px;
+  cursor:pointer;
 }
-.product {
-  width: 200px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 15px;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  text-align: center;
+.sidebar li:hover{background:#3b82f6}
+
+/* CONTENT */
+.content{flex:1}
+
+/* SLIDER */
+.slider{
+  height:200px;
+  border-radius:10px;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.price{color:red;font-weight:bold}
+
+button{
+  background:#22c55e;
+  color:white;
+  border:none;
+  padding:7px;
+  border-radius:5px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.5);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  width:300px;
+}
+
+/* CART POPUP */
+.cart-box{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .container{flex-direction:column}
+  .sidebar{width:100%}
+}
+#menuList{
   transition: 0.3s;
 }
 
-.product:hover {
-  transform: scale(1.05);
+.hide{
+  display: none;
+}
+/* CARD */
+.card{
+  background:#f3f4f6;
+  border-radius:12px;
+  overflow:hidden;
+  text-align:center;
+  padding:10px;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+/* ẢNH */
+.product-img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
 }
 
-/* ap3 */
-.product-1 {
-  background-image: url(anh/ap3.jpg) ;
+/* TÊN */
+.product-name{
+  margin:10px 0 5px;
+  font-size:18px;
 }
 
-/* ap4 */
-.product-2 {
-  background-image: url(anh/ap4.jpg) ;
+/* GIÁ */
+.product-price{
+  color:red;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
-/* pro */
-.product-3 {
-  background-image: url(anh/appro.jpg) ;
+/* NÚT */
+.buy-btn{
+  width:100%;
+  background:#16a34a;
+  color:white;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
 }
-/* pro2*/
-.product-4 {
-  background-image: url(anh/pro2.jpg) ;
-}
-/*pro3*/
-.product-5 {
-  background-image: url(anh/pro3.jpg) ;
+
+.buy-btn:hover{
+  background:#15803d;
 }
