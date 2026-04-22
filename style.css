@@ -50,17 +50,25 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Áo */
+/* ap3 */
 .product-1 {
-  background-image: url(anh/a1.jfif) ;
+  background-image: url(anh/ap3.jpg) ;
 }
 
-/* Quần */
+/* ap4 */
 .product-2 {
-  background: linear-gradient(135deg, #a1ffce, #faffd1);
+  background-image: url(anh/ap4.jpg) ;
 }
 
-/* Giày */
+/* pro */
 .product-3 {
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  background-image: url(anh/appro.jpg) ;
+}
+/* pro2*/
+.product-4 {
+  background-image: url(anh/pro2.jpg) ;
+}
+/*pro3*/
+.product-5 {
+  background-image: url(anh/pro3.jpg) ;
 }
