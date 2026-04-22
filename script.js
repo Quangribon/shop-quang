@@ -1,7 +1,9 @@
 const products = [
-  { id: 1, name: "Áo", price: 100000 },
-  { id: 2, name: "Quần", price: 200000 },
-  { id: 3, name: "Giày", price: 300000 }
+  { id: 1, name: "AP3", price: 250000 },
+  { id: 2, name: "AP4", price: 500000 },
+  { id: 3, name: "AP Pro", price: 350000 },
+  { id: 4, name: "AP Pro2", price: 450000 },
+  { id: 5, name: "AP Pro3", price: 950000 }
 ];
 
 let cart = [];
