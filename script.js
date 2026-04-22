@@ -1,58 +1,127 @@
-const products = [
-  { id: 1, name: "AP3", price: 250000 },
-  { id: 2, name: "AP4", price: 500000 },
-  { id: 3, name: "AP Pro", price: 350000 },
-  { id: 4, name: "AP Pro2", price: 450000 },
-  { id: 5, name: "AP Pro3", price: 950000 }
+const banners=["🔥 Sale cực mạnh","🎧 Tai nghe xịn","⚡ Giá sốc"];
+let slide=0;
+
+setInterval(()=>{
+  document.getElementById("slider").innerText=banners[slide];
+  document.getElementById("slider").style.background=
+    `linear-gradient(90deg,#0ea5e9,#3b82f6)`;
+  slide=(slide+1)%banners.length;
+},2000);
+
+/* DATA */
+const data=[
+  {
+    name:"AP3 ANC",
+    price:250000,
+    cat:"ear",
+    img:"anh/ap3.jpg"
+  },
+  {
+    name:"AP4 ANC",
+    price:650000,
+    cat:"ear",
+    img:"anh/ap4.jpg"
+  },
+  {
+    name:"AP-PRO ANC",
+    price:350000,
+    cat:"ear",
+    img:"anh/appro.jpg"
+  },
+  {
+    name:"AP-PRO2 ANC",
+    price:450000,
+    cat:"ear",
+    img:"anh/pro2.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  }
 ];
 
-let cart = [];
+let current="all";
+let total=0;
 
-const productsDiv = document.getElementById("products");
-const cartDiv = document.getElementById("cart");
-const totalText = document.getElementById("total");
+/* RENDER */
+function render(){
+  const list=document.getElementById("products");
+  list.innerHTML="";
+  const keyword=document.getElementById("search").value.toLowerCase();
 
-// hiển thị sản phẩm
-products.forEach(p => {
-  const div = document.createElement("div");
-  div.className = "product product-" + p.id;
-  div.innerHTML = `
-    <h3>${p.name}</h3>
-    <p>${p.price}đ</p>
-    <button onclick="add(${p.id})">Thêm</button>
+  data.filter(p=>{
+    return (current=="all"||p.cat==current)
+    && p.name.toLowerCase().includes(keyword);
+  })
+  .forEach(p=>{
+    const div=document.createElement("div");
+    div.className="card";
+    div.innerHTML=`
+    <img class="product-img" src="${p.img}">
+    <h3 class="product-name">${p.name}</h3>
+    <p class="product-price">${p.price.toLocaleString()}đ</p>
+    <button class="buy-btn" onclick="add(${p.price});event.stopPropagation()">
+      Mua ngay
+    </button>
   `;
-  productsDiv.appendChild(div);
-});
+    div.onclick=()=>showDetail(p);
+    list.appendChild(div);
+  });
+}
 
-function add(id) {
-  const p = products.find(x => x.id === id);
-  cart.push(p);
+/* FILTER */
+function filter(cat){
+  current=cat;
   render();
 }
 
-function render() {
-  cartDiv.innerHTML = "";
-  let total = 0;
+/* SEARCH */
+document.getElementById("search").addEventListener("input",render);
 
-  cart.forEach(i => {
-    const li = document.createElement("li");
-    li.textContent = i.name + " - " + i.price + "đ";
-    cartDiv.appendChild(li);
-    total += i.price;
-  });
-
-  totalText.textContent = "Tổng: " + total + "đ";
+/* CART */
+function add(price){
+  total+=price;
+  document.getElementById("total").innerText=total.toLocaleString()+"đ";
 }
 
-// gửi đơn lên server
-function sendOrder() {
-  fetch("http://localhost:3000/order", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(cart)
-  })
-  .then(res => res.text())
-  .then(data => alert(data));
+/* MODAL */
+function showDetail(p){
+  const modal=document.getElementById("modal");
+  modal.style.display="flex";
+  document.getElementById("modalContent").innerHTML=`
+    <h3>${p.name}</h3>
+    <p>Giá: ${p.price.toLocaleString()}đ</p>
+    <button onclick="buyZalo('${p.name}', ${p.price})">
+  Mua ngay
+</button>
+    <br><br>
+    <button onclick="closeModal()">Đóng</button>
+  `;
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+}
+
+/* INIT */
+render();
+function toggleMenu(){
+  const menu = document.getElementById("menuList");
+  menu.classList.toggle("hide");
+}
+function buyZalo(name, price){
+  let phone = "0343282287";
+
+  let message = `Tôi muốn mua ${name}
+Giá: ${price.toLocaleString()}đ
+
+Tên:
+SĐT:
+Địa chỉ:`;
+
+  let url = "https://zalo.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
 }
