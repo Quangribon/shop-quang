@@ -7,23 +7,49 @@
 </head>
 <body>
 
-<h1>🛒 🔥 Shop Quang 🔥</h1>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">🎧 Shop MAX</div>
+  <div class="search">
+    <input id="search" placeholder="Tìm sản phẩm...">
+  </div>
+</div>
 
-<div class="products" id="products"></div>
+<div class="container">
 
-<h2>🧾 Giỏ hàng</h2>
-<ul id="cart"></ul>
-<p id="total">Tổng: 0đ</p>
-<button onclick="sendOrder()">Gửi đơn</button>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+  <h3 onclick="toggleMenu()">Danh mục ⬇</h3>
 
-<br><br>
+  <ul id="menuList">
+    <li onclick="filter('all')">Tất cả</li>
+    <li onclick="filter('ear')">Tai nghe</li>
+    <li onclick="filter('speaker')">Loa</li>
+    <li onclick="filter('acc')">Phụ kiện</li>
+  </ul>
+</div>
 
-<!-- Nút Messenger -->
-<a href="https://www.facebook.com/quangribon/" target="_blank">
-  💬 Nhắn qua Messenger
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- SLIDER -->
+    <div class="slider" id="slider"></div>
+
+    <!-- PRODUCTS -->
+    <div class="products" id="products"></div>
+
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<!-- CART -->
+<a class="zalo-chat" href="https://zalo.me/0343282287" target="_blank">
+  💬 Chat Zalo
 </a>
-<br></br>
-<a href="https://zalo.me/0343282287">Liên hệ Zalo</a>
 
 <script src="script.js"></script>
 </body>
