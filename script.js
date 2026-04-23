@@ -39,7 +39,68 @@ const data=[
     price:950000,
     cat:"ear",
     img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP2 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"tai nghe xương",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"tai nghe công nghệ",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
+  },
+  {
+    name:"AP-PRO3 ANC",
+    price:950000,
+    cat:"ear",
+    img:"anh/pro3.jpg"
   }
+
 ];
 
 let current="all";
