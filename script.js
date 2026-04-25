@@ -169,18 +169,22 @@ function add(price){
 /* MODAL */
 function showDetail(p){
   const modal = document.getElementById("modal");
+
+  // ❗ reset trước
+  const content = document.getElementById("modalContent");
+  content.innerHTML = "";
+
   modal.style.display = "flex";
 
-  document.getElementById("modalContent").innerHTML = `
+  content.innerHTML = `
     <img src="${p.img}" style="width:100%;border-radius:10px">
 
     <h3>${p.name}</h3>
-
     <p style="color:red;font-weight:bold">
       ${p.price.toLocaleString()}đ
     </p>
 
-    <p>${p.desc}</p>
+    <p>${p.desc || ""}</p>
 
     <button onclick="buyZalo('${p.name}', ${p.price})">
       Mua ngay
