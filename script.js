@@ -14,91 +14,106 @@ const data=[
     name:"AP3 ANC",
     price:250000,
     cat:"ear",
-    img:"anh/ap3.jpg"
+    img:"anh/ap3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP4 ANC",
     price:650000,
     cat:"ear",
-    img:"anh/ap4.jpg"
+    img:"anh/ap4.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 8h, case 30h,cảm biến hồng ngoại"
   },
   {
     name:"AP-PRO ANC",
     price:350000,
     cat:"ear",
-    img:"anh/appro.jpg"
+    img:"anh/appro.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 8h, case 30h,bass ấm"
   },
   {
     name:"AP-PRO2 ANC",
     price:450000,
     cat:"ear",
-    img:"anh/pro2.jpg"
+    img:"anh/pro2.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 8h, case 30h,xuyên âm thích ứng"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 8h, case 30h,bản cao cấp nhất hiện tại"
   },
   {
     name:"AP2 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"tai nghe xương",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"tai nghe công nghệ",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   },
   {
     name:"AP-PRO3 ANC",
     price:950000,
     cat:"ear",
-    img:"anh/pro3.jpg"
+    img:"anh/pro3.jpg",
+    desc:"Tai nghe chống ồn ANC, pin 6h, case 24h"
   }
 
 ];
@@ -123,9 +138,13 @@ function render(){
     <img class="product-img" src="${p.img}">
     <h3 class="product-name">${p.name}</h3>
     <p class="product-price">${p.price.toLocaleString()}đ</p>
-    <button class="buy-btn" onclick="add(${p.price});event.stopPropagation()">
-      Mua ngay
-    </button>
+    <button class="buy-btn" 
+onclick="window.open('https://zalo.me/0343282287', '_blank');event.stopPropagation()">
+  Mua ngay
+</button>
+    <button class="detail-btn" onclick='showDetail(${JSON.stringify(p)});event.stopPropagation()'>
+  Chi tiết
+</button>
   `;
     div.onclick=()=>showDetail(p);
     list.appendChild(div);
@@ -149,15 +168,26 @@ function add(price){
 
 /* MODAL */
 function showDetail(p){
-  const modal=document.getElementById("modal");
-  modal.style.display="flex";
-  document.getElementById("modalContent").innerHTML=`
+  const modal = document.getElementById("modal");
+  modal.style.display = "flex";
+
+  document.getElementById("modalContent").innerHTML = `
+    <img src="${p.img}" style="width:100%;border-radius:10px">
+
     <h3>${p.name}</h3>
-    <p>Giá: ${p.price.toLocaleString()}đ</p>
+
+    <p style="color:red;font-weight:bold">
+      ${p.price.toLocaleString()}đ
+    </p>
+
+    <p>${p.desc}</p>
+
     <button onclick="buyZalo('${p.name}', ${p.price})">
-  Mua ngay
-</button>
+      Mua ngay
+    </button>
+
     <br><br>
+
     <button onclick="closeModal()">Đóng</button>
   `;
 }
