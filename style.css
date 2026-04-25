@@ -211,3 +211,12 @@ button{
 .buy-btn:hover{
   background:#15803d;
 }
+.detail-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
