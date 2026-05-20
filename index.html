@@ -26,6 +26,8 @@
     <li onclick="filter('ear')">Tai nghe</li>
     <li onclick="filter('speaker')">Loa</li>
     <li onclick="filter('acc')">Phụ kiện</li>
+    <li onclick="filter('mh')">Phụ Kiện Decor</li>
+    <li onclick="showVongQuay()">Vòng Quay</li>
   </ul>
 </div>
 
@@ -48,12 +50,28 @@
 <a class="zalo-chat" href="https://zalo.me/0343282287" target="_blank">
   💬 Chat Zalo
 </a>
-<link rel="stylesheet" href="style.css?v=2">
-<script src="script.js?v=2"></script>
+<link rel="stylesheet" href="style.css?v=3">
 
 <!-- MODAL -->
 <div class="modal" id="modal">
   <div class="modal-content" id="modalContent"></div>
 </div>
+<div id="spinPopup" class="spin-popup">
+  <div class="spin-box">
+    <h2>🎁 Vòng quay may mắn</h2>
+
+    <div class="wheel-container">
+      <canvas id="wheelCanvas" width="300" height="300"></canvas>
+      <div class="pointer">▼</div>
+    </div>
+
+  <div class="spin-actions">
+    <button id="spinBtn" class="spin-btn">Quay ngay</button>
+    <button class="close-btn" onclick="closeSpin()">Đóng</button>
+  </div>
+    <p id="result"></p>
+  </div>
+</div>
+<script src="script.js?v=3"></script>
 </body>
 </html>
