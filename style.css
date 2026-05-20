@@ -287,3 +287,94 @@ body{margin:0;font-family:Arial;background:#f1f5f9}
     font-size:18px;
   }
 }
+.spin-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spin-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.wheel-container {
+  position: relative;
+}
+
+.pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: red;
+}
+.spin-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+
+  justify-content: center;
+  align-items: center; /* 👈 cái này để giữa màn hình */
+}
+
+.spin-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+
+  /* 👇 FIX CĂN GIỮA */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 350px;
+  margin: auto;
+}
+
+.pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: red;
+}
+
+.wheel-container {
+  position: relative;
+
+  /* 👇 FIX căn giữa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px 0;
+}
+#wheelCanvas {
+  display: block;
+  margin: 0 auto; /* 👈 cái này cực quan trọng */
+
+  border-radius: 50%;
+}
+.spin-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 👈 khoảng cách giữa 2 nút */
+  margin-top: 10px;
+}
