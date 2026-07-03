@@ -286,3 +286,27 @@ function closeSpin() {
 window.addEventListener("load", function () {
   showVongQuay();
 });
+const flycamPassword = "FLYCAM2026";
+
+const flycamLink = "https://docs.google.com/document/u/0/d/1XeH_vSSrIdedth46C7ATSDOF0mx01GbUb3FgFyKuGh8/mobilebasic?pli=1";
+
+function flycam(){
+    document.getElementById("flycamPopup").style.display="flex";
+    document.getElementById("flycamCode").value="";
+    document.getElementById("flycamError").innerText="";
+}
+
+function closeFlycam(){
+    document.getElementById("flycamPopup").style.display="none";
+}
+
+function checkFlycam(){
+
+    let code=document.getElementById("flycamCode").value.trim();
+
+    if(code===flycamPassword){
+        window.location.href=flycamLink;
+    }else{
+        document.getElementById("flycamError").innerText="❌ Mã truy cập không đúng!";
+    }
+}
