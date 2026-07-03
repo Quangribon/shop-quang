@@ -20,7 +20,8 @@ const data = [
   { name: "AP4 ANC", price: 650000, cat: "ear", img: "anh/ap4.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
   { name: "AP-PRO ANC", price: 350000, cat: "ear", img: "anh/appro.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
   { name: "AP-PRO2 ANC", price: 450000, cat: "ear", img: "anh/pro2.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
-  { name: "AP-PRO3 ANC", price: 950000, cat: "ear", img: "anh/pro3.jpg", desc: "Tai nghe cao cấp nhất" }
+  { name: "AP-PRO3 ANC", price: 950000, cat: "ear", img: "anh/pro3.jpg", desc: "Tai nghe cao cấp nhất" },
+  { name: "Chống Rớt Tai Nghe", price: 35000, cat: "acc", img "", desc: "Giữ tai nghe giúp tự tin hơn khi chạy bộ"}
 ];
 
 let current = "all";
