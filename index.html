@@ -6,6 +6,27 @@
   <title>Shop Mini</title>
 </head>
 <body>
+  <!-- ===== POPUP NHẬP MÃ FLYCAM ===== -->
+<div id="flycamPopup" class="popup">
+  <div class="popup-box">
+    <h2>🚁 Giả lập Flycam</h2>
+
+    <p>Nhập mã truy cập</p>
+
+    <input
+      type="password"
+      id="flycamCode"
+      placeholder="Nhập mã..."
+    >
+
+    <p id="flycamError" class="error"></p>
+
+    <div class="popup-btns">
+      <button class="btn-blue" onclick="checkFlycam()">Truy cập</button>
+      <button class="btn-gray" onclick="closeFlycam()">Đóng</button>
+    </div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <div class="header">
@@ -27,7 +48,7 @@
     <li onclick="filter('speaker')">Loa</li>
     <li onclick="filter('acc')">Phụ kiện</li>
     <li onclick="filter('mh')">Phụ Kiện Decor</li>
-    <li onclick="filter('fly')">Giả lập flycam</li>
+    <li onclick="flycam()">Giả lập flycam</li>
     <li onclick="showVongQuay()">Vòng Quay</li>
   </ul>
 </div>
