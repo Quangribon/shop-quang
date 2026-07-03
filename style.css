@@ -378,3 +378,62 @@ body{margin:0;font-family:Arial;background:#f1f5f9}
   gap: 10px; /* 👈 khoảng cách giữa 2 nút */
   margin-top: 10px;
 }
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-box{
+    width:350px;
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.popup-box h2{
+    color:#0b5ed7;
+}
+
+.popup-box input{
+    width:100%;
+    padding:12px;
+    border:2px solid #0b5ed7;
+    border-radius:8px;
+    margin-top:10px;
+    box-sizing:border-box;
+}
+
+.popup-btns{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.popup-btns button{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.btn-blue{
+    background:#0b5ed7;
+    color:#fff;
+}
+
+.btn-gray{
+    background:#ddd;
+}
+
+.error{
+    color:red;
+    height:20px;
+}
