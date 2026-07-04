@@ -12,6 +12,7 @@ setInterval(() => {
     slider.style.background = `linear-gradient(90deg,#0ea5e9,#3b82f6)`;
     slide = (slide + 1) % banners.length;
   }
+  
 }, 2000);
 
 // ===== DATA =====
