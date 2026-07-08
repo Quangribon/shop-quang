@@ -331,3 +331,17 @@ function checkFlycam(){
         document.getElementById("flycamError").innerText="❌ Mã truy cập không đúng!";
     }
 }
+// ===== Export ra window =====
+window.showVongQuay = showVongQuay;
+window.closeSpin = closeSpin;
+window.spinWheel = spinWheel;
+
+window.filter = filter;
+window.buyZalo = buyZalo;
+window.showDetail = showDetail;
+window.closeModal = closeModal;
+window.toggleMenu = toggleMenu;
+
+window.flycam = flycam;
+window.closeFlycam = closeFlycam;
+window.checkFlycam = checkFlycam;
