@@ -1,4 +1,24 @@
-localStorage.removeItem("spinTime");
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCgPZf6aXnzOaF8ytLyWoWcGr78X2NIhM",
+  authDomain: "shop-quangribon.firebaseapp.com",
+  projectId: "shop-quangribon",
+  storageBucket: "shop-quangribon.firebasestorage.app",
+  messagingSenderId: "591997584122",
+  appId: "1:591997584122:web:1ace50b4802d143a6d7f43"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 console.log("JS LOADED");
 
 // ===== SLIDER =====
