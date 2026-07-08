@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop Mini</title>
+
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
-  <!-- ===== POPUP NHẬP MÃ FLYCAM ===== -->
+
+<!-- ===== POPUP NHẬP MÃ FLYCAM ===== -->
 <div id="flycamPopup" class="popup">
   <div class="popup-box">
     <h2>🚁 Giả lập Flycam</h2>
@@ -28,10 +31,10 @@
   </div>
 </div>
 
-  
 <!-- HEADER -->
 <div class="header">
   <div class="logo">🎧 Shop QuangRibon</div>
+
   <div class="search">
     <input id="search" placeholder="Tìm sản phẩm...">
   </div>
@@ -41,19 +44,18 @@
 
   <!-- SIDEBAR -->
   <div class="sidebar">
-  <h3 onclick="toggleMenu()">Danh mục ⬇</h3>
+    <h3 onclick="toggleMenu()">Danh mục ⬇</h3>
 
-  <ul id="menuList">
-    <li onclick="filter('all')">Tất cả</li>
-    <li onclick="filter('ear')">Tai nghe</li>
-    <li onclick="filter('speaker')">Loa</li>
-    <li onclick="filter('acc')">Phụ kiện</li>
-    <li onclick="filter('mh')">Phụ Kiện Decor</li>
-    <li onclick="flycam()">Giả lập flycam</li>
-    <li onclick="showVongQuay()">Vòng Quay</li>
-  </ul>
-</div>
-
+    <ul id="menuList">
+      <li onclick="filter('all')">Tất cả</li>
+      <li onclick="filter('ear')">Tai nghe</li>
+      <li onclick="filter('speaker')">Loa</li>
+      <li onclick="filter('acc')">Phụ kiện</li>
+      <li onclick="filter('mh')">Phụ Kiện Decor</li>
+      <li onclick="flycam()">Giả lập flycam</li>
+      <li onclick="showVongQuay()">Vòng Quay</li>
+    </ul>
+  </div>
 
   <!-- CONTENT -->
   <div class="content">
@@ -65,22 +67,23 @@
     <div class="products" id="products"></div>
 
   </div>
+
 </div>
 
-<!-- MODAL -->
-
-<!-- CART -->
+<!-- ZALO -->
 <a class="zalo-chat" href="https://zalo.me/0343282287" target="_blank">
   💬 Chat Zalo
 </a>
-<link rel="stylesheet" href="style.css?v=3">
 
 <!-- MODAL -->
 <div class="modal" id="modal">
   <div class="modal-content" id="modalContent"></div>
 </div>
+
+<!-- VÒNG QUAY -->
 <div id="spinPopup" class="spin-popup">
   <div class="spin-box">
+
     <h2>🎁 Vòng quay may mắn</h2>
 
     <div class="wheel-container">
@@ -88,32 +91,18 @@
       <div class="pointer">▼</div>
     </div>
 
-  <div class="spin-actions">
-    <button id="spinBtn" class="spin-btn">Quay ngay</button>
-    <button class="close-btn" onclick="closeSpin()">Đóng</button>
-  </div>
+    <div class="spin-actions">
+      <button id="spinBtn" class="spin-btn">Quay ngay</button>
+      <button class="close-btn" onclick="closeSpin()">Đóng</button>
+    </div>
+
     <p id="result"></p>
+
   </div>
 </div>
-  <!-- Firebase -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCgPZf6aXnzOaF8ytLyWoWcGr78X2NIhM",
-  authDomain: "shop-quangribon.firebaseapp.com",
-  projectId: "shop-quangribon",
-  storageBucket: "shop-quangribon.firebasestorage.app",
-  messagingSenderId: "591997584122",
-  appId: "1:591997584122:web:1ace50b4802d143a6d7f43"
-};
+<!-- CHỈ CÒN FILE JS -->
+<script type="module" src="script.js?v=5"></script>
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-window.db = db;
-</script>
-<script type="module" src="script.js?v=4"></script>
 </body>
 </html>
