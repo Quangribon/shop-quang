@@ -94,6 +94,25 @@
     <p id="result"></p>
   </div>
 </div>
+  <!-- Firebase -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "API_KEY_CỦA_BẠN",
+  authDomain: "shop-quangribon.firebaseapp.com",
+  projectId: "shop-quangribon",
+  storageBucket: "shop-quangribon.firebasestorage.app",
+  messagingSenderId: "591997584122",
+  appId: "1:591997584122:web:1ace50b4802d143a6d7f43"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.db = db;
+</script>
 <script src="script.js?v=3"></script>
 </body>
 </html>
