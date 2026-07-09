@@ -37,10 +37,10 @@ setInterval(() => {
 
 // ===== DATA =====
 const data = [
-  { name: "AP3 ANC", price: 250000, oldPrice: 450000, cat: "ear", img: "anh/ap3.jpg", desc: "Tai nghe chống ồn ANC, pin 6h, case 24h" },
+  { name: "AP3 Hàng Cũ", price: 169000, oldPrice: 450000, cat: "ear", img: "anh/ap3.jpg", desc: "Tai nghe hàng cũ,đã qua sửa chữa." },
   { name: "AP4 ANC", price: 650000, cat: "ear", img: "anh/ap4.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
-  { name: "AP-PRO ANC", price: 350000, cat: "ear", img: "anh/appro.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
-  { name: "AP-PRO2 ANC", price: 450000, cat: "ear", img: "anh/pro2.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
+  { name: "AP-PRO Hàng Cũ ", price: 199000, cat: "ear", img: "anh/appro.jpg", desc: "Tai nghe hàng cũ,đã qua sửa chữa." },
+  { name: "AP-PRO2 ANC", price: 650000, cat: "ear", img: "anh/pro2.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
   { name: "AP-PRO3 ANC", price: 950000, cat: "ear", img: "anh/pro3.jpg", desc: "Tai nghe cao cấp nhất" },
   { name: "Chống Rớt Tai Nghe", price: 35000, cat: "acc", img: "anh/phu kien chong roi.jpg", desc: "Giữ tai nghe giúp tự tin hơn khi chạy bộ"},
   { name: "Dây sạc nhanh Màu Xanh", price: 35000, cat: "acc", img: "anh/dayxanh.jpg", desc: "Dây sạc nhanh chân tai C"},
