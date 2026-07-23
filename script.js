@@ -37,6 +37,7 @@ setInterval(() => {
 
 // ===== DATA =====
 const data = [
+  { name: "AP2 Hàng Cũ", price: 199000, oldPrice: 450000, cat: "ear", img: "anh/ap3.jpg", desc: "Tai nghe hàng cũ,đã qua sửa chữa.Không áp dụng giảm giá" },
   { name: "AP3 Hàng Cũ", price: 169000, oldPrice: 450000, cat: "ear", img: "anh/ap3.jpg", desc: "Tai nghe hàng cũ,đã qua sửa chữa.Không áp dụng giảm giá" },
   { name: "AP4 ANC", price: 650000, cat: "ear", img: "anh/ap4.jpg", desc: "Tai nghe chống ồn ANC, pin 8h, case 30h" },
   { name: "AP-PRO Hàng Cũ ",oldPrice: 450000, price: 199000, cat: "ear", img: "anh/appro.jpg", desc: "Tai nghe hàng cũ,đã qua sửa chữa.Không áp dụng giảm giá" },
