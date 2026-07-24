@@ -147,11 +147,11 @@ function isSameDay(timestamp) {
 
 // ===== VÒNG QUAY =====
 const gifts = [
-  { text: "Giảm 10%", percent: 30 },
-  { text: "Giảm 20%", percent: 25 },
+  { text: "Giảm 10%", percent: 20 },
+  { text: "Giảm 20%", percent: 20 },
   { text: "Freeship", percent: 20 },
-  { text: "Giảm 30%", percent: 15 },
-  { text: "Giảm 50%", percent: 5 },
+  { text: "Giảm 30%", percent: 20 },
+  { text: "Giảm 50%", percent: 15 },
   { text: "Quà bí mật 🎁", percent: 5 }
 ];
 const secretGifts = [
