@@ -147,12 +147,12 @@ function isSameDay(timestamp) {
 
 // ===== VÒNG QUAY =====
 const gifts = [
-  { text: "Giảm 10%", percent: 20 },
+  { text: "Giảm 10%", percent: 10 },
   { text: "Giảm 20%", percent: 20 },
-  { text: "Freeship", percent: 20 },
-  { text: "Giảm 30%", percent: 20 },
-  { text: "Giảm 50%", percent: 15 },
-  { text: "Quà bí mật 🎁", percent: 5 }
+  { text: "Freeship", percent: 30 },
+  { text: "Giảm 30%", percent: 30 },
+  { text: "Giảm 50%", percent: 7 },
+  { text: "Quà bí mật 🎁", percent: 3 }
 ];
 const secretGifts = [
   {
@@ -166,9 +166,9 @@ const secretGifts = [
     msg: "🔥 Bạn nhận được voucher giảm giá 100K!"
   },
   {
-    name: "Freeship toàn quốc",
+    name: "Giảm Giá 80%",
     img: "anh/ap4.jpg",
-    msg: "🚚 Chúc mừng! Bạn được freeship!"
+    msg: "🚚 Chúc mừng! Bạn được Giảm giá lên tới 80%!"
   }
 ];
 function getWeightedIndex() {
