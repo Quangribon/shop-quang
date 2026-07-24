@@ -156,7 +156,7 @@ const gifts = [
 ];
 const secretGifts = [
   {
-    name: "Tai nghe VIP",
+    name: "Tai nghe PRO2 ANC",
     img: "anh/ap3.jpg",
     msg: "🎉 Chúc bạn may mắn! Đây là phần quà đặc biệt!"
   },
